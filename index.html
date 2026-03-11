@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevCore Solutions | Разработка приложений и IT-консалтинг</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: #333; }
+
+    /* Header */
+    header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.5rem; font-weight: bold; letter-spacing: 1px; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: white; text-decoration: none; opacity: 0.9; transition: opacity 0.3s; }
+    .nav-links a:hover { opacity: 1; }
+
+    /* Hero */
+    .hero { margin-top: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 120px 0 80px; text-align: center; }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 700; }
+    .hero p { font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.95; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .btn { display: inline-block; background: white; color: #667eea; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: transform 0.3s, box-shadow 0.3s; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+
+    /* Services */
+    .services { padding: 80px 0; background: #f8f9fa; }
+    .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #333; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .service-card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .service-card:hover { transform: translateY(-5px); }
+    .service-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .service-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #667eea; }
+    .service-card p { color: #666; line-height: 1.8; }
+
+    /* About */
+    .about { padding: 80px 0; }
+    .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .about-text h2 { font-size: 2.5rem; margin-bottom: 1.5rem; color: #333; }
+    .about-text p { color: #666; margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8; }
+    .stats { display: flex; gap: 40px; margin-top: 30px; }
+    .stat h4 { font-size: 2.5rem; color: #667eea; }
+    .stat p { color: #999; font-size: 0.9rem; }
+
+    /* Contact */
+    .contact { padding: 80px 0; background: #2d3748; color: white; text-align: center; }
+    .contact h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .contact p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem; }
+    .contact-info { display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; }
+    .contact-item { display: flex; align-items: center; gap: 10px; }
+
+    /* Footer */
+    footer { background: #1a202c; color: #718096; padding: 30px 0; text-align: center; font-size: 0.9rem; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .about-content { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">DevCore Solutions</div>
+      <ul class="nav-links">
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Создаём цифровое будущее</h1>
+    <p>Разработка мобильных приложений, веб-платформ и IT-консалтинг для бизнеса любого масштаба</p>
+    <a href="#contact" class="btn">Обсудить проект</a>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <h2 class="section-title">Наши услуги</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h3>Мобильная разработка</h3>
+        <p>Native и кроссплатформенные приложения для iOS и Android. Swift, Kotlin, React Native, Flutter.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💻</div>
+        <h3>Веб-разработка</h3>
+        <p>Корпоративные порталы, SaaS-платформы, e-commerce решения. React, Node.js, Python, Go.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3>UI/UX Дизайн</h3>
+        <p>Проектирование интерфейсов, прототипирование, пользовательские исследования и тестирование.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">☁️</div>
+        <h3>Cloud Solutions</h3>
+        <p>AWS, Google Cloud, Azure. Архитектура, миграция, DevOps и масштабирование инфраструктуры.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔒</div>
+        <h3>Безопасность</h3>
+        <p>Аудит безопасности, защита данных, соответствие GDPR и требованиям регуляторов.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3>IT-консалтинг</h3>
+        <p>Технический аудит, оптимизация процессов разработки, CTO-as-a-Service.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>Почему выбирают нас</h2>
+        <p>DevCore Solutions — команда опытных разработчиков и архитекторов. С 2018 года мы помогаем компаниям цифровизировать бизнес-процессы и создавать продукты, которые любят пользователи.</p>
+        <p>Мы верим в прозрачность процессов, современные технологии и долгосрочные партнёрства с клиентами.</p>
+        <div class="stats">
+          <div class="stat">
+            <h4>150+</h4>
+            <p>Реализованных проектов</p>
+          </div>
+          <div class="stat">
+            <h4>8</h4>
+            <p>Лет на рынке</p>
+          </div>
+          <div class="stat">
+            <h4>40+</h4>
+            <p>Экспертов в команде</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-image" style="text-align: center; font-size: 8rem; opacity: 0.3;">
+        🚀
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>Готовы начать проект?</h2>
+    <p>Расскажите о вашей идее, и мы предложим оптимальное технологическое решение</p>
+    <a href="mailto:hello@mrshedar.tech" class="btn" style="background: transparent; border: 2px solid white; color: white;">hello@mrshedar.tech</a>
+    <div class="contact-info">
+      <div class="contact-item">
+        <span>📍</span>
+        <span>Москва, Россия</span>
+      </div>
+      <div class="contact-item">
+        <span>📧</span>
+        <span>hello@mrshedar.tech</span>
+      </div>
+      <div class="contact-item">
+        <span>🕐</span>
+        <span>Пн-Пт: 9:00 - 18:00</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 DevCore Solutions. Все права защищены.</p>
+  </div>
+</footer>
+</body>
+</html>
